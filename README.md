@@ -2,6 +2,10 @@
 对 Auto Layout API 进行了简单的封装。
 
 ## API
+该类的 API 均返回一个 Constraint 数组，这个数组用于视图的 addConstraint 方法添加约束，添加约束时要注意关闭默认的布局方式，否则自动布局将失效，关闭方法：
+```
+view.translatesAutoresizingMaskIntoConstraints = false
+```
 ### fillScreen
 使控件充满父视图
 `FFConstraint.fillScreen(item: subView, toItem: superView)`
